@@ -19,6 +19,7 @@
   "devDependencies": {
     "@playwright/test": "^1.62.0",
     "@types/node": "^26.1.2",
+    "allure-playwright": "^3.10.2",
     "eslint": "^10.8.0",
     "globals": "^17.9.0",
     "typescript-eslint": "^8.66.0"

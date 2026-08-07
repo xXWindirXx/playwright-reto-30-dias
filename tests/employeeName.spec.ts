@@ -29,16 +29,15 @@ test('Get all employee names', async ({ page }) => {
         const cell = rows.nth(i).getByRole('cell').nth(3)
         //Extrae de forma asíncrona el contenido de texto que está dentro de esa celda y lo asigna a la variable username.
         const username = await cell.textContent()
-        //Evalúa que username tenga un valor válido (es decir, que la celda no haya retornado null o una cadena vacía).
+        //Evalúa que username tenga un valor válido (es decir, qu la celda no haya retornado null o una cadena vacía).
         if (username) {
             //Agrega el nombre de usuario obtenido al final del arreglo usernames, .trim evita que se guarden cadenas vacias.
             usernames.push(username.trim())
-        //Cierran la condición if   
+            //Cierran la condición if   
         }
-    //Cierra la estructura del ciclo for.      
+        //Cierra la estructura del ciclo for.      
     }
     // Imprime en la terminal la etiqueta de texto acompañada del arreglo completo con los usuarios recolectados.
     console.log('Usernames registrados: ', usernames);
-
 
 })

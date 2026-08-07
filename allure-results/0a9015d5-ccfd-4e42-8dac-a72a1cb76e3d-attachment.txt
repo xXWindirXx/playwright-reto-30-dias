@@ -1,0 +1,8 @@
+Usernames registrados:  [
+  'manda user',
+  'Timothy Amiano',
+  'Qwerty LName',
+  'FName LName',
+  'Jobin Sam',
+  'Timothy Amiano'
+]
