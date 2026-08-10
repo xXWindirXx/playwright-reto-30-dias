@@ -1,0 +1,10 @@
+Current menu item Admin
+Current menu item PIM
+Current menu item Leave
+Current menu item Time
+Current menu item Recruitment
+Current menu item My Info
+Current menu item Performance
+Current menu item Dashboard
+Current menu item Directory
+Current menu item Maintenance

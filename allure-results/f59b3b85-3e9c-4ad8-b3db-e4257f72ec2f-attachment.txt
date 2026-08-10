@@ -1,0 +1,21 @@
+Current menu items count 12
+First menu item is Admin
+Menu item 2 is PIM
+Menu item 3 is Leave
+Menu item 4 is Time
+Menu item 5 is Recruitment
+Menu item 6 is My Info
+Menu item 7 is Performance
+Menu item 8 is Dashboard
+Menu item 9 is Directory
+Menu item 10 is Maintenance
+Menu item 11 is Claim
+Menu item 12 is Buzz
+[
+  'Admin',       'PIM',
+  'Leave',       'Time',
+  'Recruitment', 'My Info',
+  'Performance', 'Dashboard',
+  'Directory',   'Maintenance',
+  'Claim',       'Buzz'
+]
