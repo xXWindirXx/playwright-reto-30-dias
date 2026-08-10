@@ -50,4 +50,33 @@ test('Check left menu options', async ({ page }) => {
     //Verifica que el array currentMenuItems sea igual al array expectedMenuItems, asegurando que los elementos de menú presentes en el panel lateral coincidan con los elementos esperados.
     expect(currentMenuItems).toEqual(expectedMenuItems)
     
+    
+})
+
+test('Navigate through the left panel', async ({ page }) => {
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
+    await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
+    await page.getByRole('button', { name: 'Login' }).click();
+
+    await expect(page.getByRole('link', { name: 'Admin' })).toBeVisible();
+    
+    //Crea un localizador que agrupa todos los elementos de lista (listitem) dentro del contenedor que tiene la etiqueta "Sidepanel".
+    const leftMenuItems = page.getByLabel('Sidepanel').getByRole('listitem')
+    //Obtiene la cantidad de elementos de menú presentes en el panel lateral.
+    const currentMenuItemsCount = await leftMenuItems.count();
+    //
+    for (let i = 0; i < currentMenuItemsCount; i++) {
+        //Obtiene el elemento de menú en la posición i y lo almacena en la variable menuitem.
+        const menuitem = leftMenuItems.nth(i);
+        //Obtiene el texto del elemento de menú en la posición i y lo almacena en la variable menuText.
+        const menuText = await menuitem.innerText();
+        //Imprime en la consola el texto del elemento de menú en la posición i.
+        console.log('Current menu item', menuText);
+        await menuitem.click();
+       //Si el texto del elemento de menú es "Maintenance", navega hacia atrás en el historial del navegador.
+        if(menuText ==='Maintenance') {
+            await page.goBack();        
+        }
+    }
 })
